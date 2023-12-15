@@ -1,0 +1,85 @@
+.home_section{
+    width: 100%;
+    position: relative;
+    height: fit-content;
+}
+
+.carasousel{
+    height: 370px;
+    position: relative;
+}
+
+.carasousel img{
+    width: -webkit-fill-available !important;
+}
+  
+.carasousel::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    top: 228px;
+    z-index: 1000;
+    height: 40%; /* Adjust this value for the height of the white overlay */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(235, 235, 235));
+    pointer-events: none;
+  }
+
+@media (max-width : 600px) {
+    .carasousel{
+        height: 460px;
+    }
+    .carasousel::before {
+        height: 20%;
+        top: 105px;
+    }
+    .carasousel img{
+        width: 460px !important;
+    }
+    .carasousel button{
+        margin-top: -342px !important; 
+        height: 90px !important;
+        width: 40px !important; 
+    }
+    .space{
+        height: 146px !important;
+    }
+    .products_section{
+        top: 5% !important;
+    }
+}
+
+/* @media (max-height: 1024px){
+    .space{
+        height: 175px !important;
+    }
+}
+
+@media (max-height: 864px) {
+    .space{
+        height: 154px;
+    }
+    .carasousel button{
+        margin-top: -340px !important;
+    }
+} */
+
+.products_section{
+    position: absolute;
+    z-index: 1000;
+    top: 12%;
+    width: 100%;
+}
+
+.products_list{
+    width: 94%;
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.space{
+    height: 270px;
+}
